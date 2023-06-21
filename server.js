@@ -18,25 +18,41 @@ const path = require('path');
 //     res.send(`<input type="text" placeholder="Enter your name" /> <button>Submit</button>`) 
 // })
 
-app.set('view engine', 'ejs');
+// app.set('view engine', 'ejs');
 
-const publicPath = path.join(__dirname, 'public');
-app.use(express.static(publicPath));
+// const publicPath = path.join(__dirname, 'public');
+// app.use(express.static(publicPath));
 const PORT = process.env.PORT || 4550;
 
-app.get('/profile', (req, res) => {
-    const user={
-        name: 'Hizbullah',
-        age: 22,
-        hobbies: ['Coding', 'Reading', 'Gaming']
-    }
-    res.render('profile',{user})
-})
+// app.get('/profile', (req, res) => {
+//     const user={
+//         name: 'Hizbullah',
+//         age: 22,
+//         hobbies: ['Coding', 'Reading', 'Gaming']
+//     }
+//     res.render('profile',{user})
+// })
 
-app.get('/login', (req, res) => {
-    res.render('login')
-})
+// app.get('/login', (req, res) => {
+//     res.render('login')
+// })
 
+//Middlewares
+// const checkAge = (req, res, next) => {
+//     const age =  req.query.age;
+//     if(age > 18){
+//         next()
+//     }
+//     else{
+//         res.send("You are not allowed")
+//     }
+// }
+
+// app.use(checkAge)
+
+// app.get('/login', (req, res) => {
+//     res.send("This is Login Page")
+// })
 
 
 
